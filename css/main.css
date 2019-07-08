@@ -1,0 +1,296 @@
+body, html {
+  height: 100vh;
+  width:100vw;
+  overflow-x: hidden;
+  }
+
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+  margin: 0;
+  background-color: #2f1a5a;
+  background-image: 
+  url("../images/bg.svg");
+  background-position: left bottom;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.center-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  border: 5px solid white;
+  border-radius: 30px;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 70vh;
+}
+
+
+
+#garlic {
+  position: absolute;
+  z-index: 1000;
+}
+
+.imggarlic img {
+  height: 100%;
+  margin-left: 5%;
+}
+
+.center-right {
+  margin-left: 25%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  font-family: "Rockwell";
+}
+
+.title {
+  font-size: 9vw;
+  display: flex;
+  z-index: 2000;
+}
+
+.subtitle {
+  font-size: 3vw;
+  display: flex;
+  z-index: 2000;
+}
+
+.title {
+  animation: animated-text 1s steps(80,end) 1s 1 normal both;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 90px; 
+  text-shadow: 2px 2px #000;
+}
+
+.subtitle {
+  animation: animated-text 0s steps(1,end) 3s 1 normal both;
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 40px; 
+  text-shadow: 2px 2px #000;
+}
+
+/* title and subtitle animation*/
+@keyframes animated-text{
+  from{width: 0%;}
+  to{width: 100%;}
+}
+
+.footer {
+  bottom:0;
+  width: 100%;
+}
+
+#logo {
+  max-width: 35vh;
+  float: right;
+  margin-right: 20px;
+  margin-top: 5px;
+}
+
+/* nav */
+nav {
+    width: 95%;
+    padding-top: 1vh;
+    margin-top:25px;
+  }
+
+  nav ul {
+    list-style: none;
+    text-align: right;
+  }
+
+  nav ul li {
+    display: inline-block;
+  }
+
+  nav ul li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    font-size: 25px;
+    text-decoration: none;
+    font-family: Verdana, Tahoma, sans-serif;
+  }
+
+  nav ul li a,
+  nav ul li a:after,
+  nav ul li a:before {
+    transition: all .5s;
+  }
+
+  nav ul li a:hover {
+    color: #f545a4;
+  }
+  
+  
+  /* stroke */
+  nav.stroke ul li a,
+  nav.fill ul li a {
+    position: relative;
+  }
+
+  nav.stroke ul li a:after,
+  nav.fill ul li a:after {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: 0%;
+    content: '.';
+    color: transparent;
+    background: #f545a4;
+    height: 5px;
+  }
+  
+  nav.stroke ul li a:hover:after {
+    width: 100%;
+  }
+
+  .mobile-menu {
+    display: none;
+    float:right;
+        }
+
+  @media only screen and (max-width: 740px) {
+    .stroke {
+        display: none;
+    }
+
+    .mobile-menu {
+display: inline-block;
+margin-right: 40px;
+margin-bottom: 10px;
+    }
+
+    #ham-menu {
+        max-width: 40px;
+        float:right;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*
+
+
+
+.intro-text {
+    display: block;
+    padding: 3em;
+    color: white;
+    font-family: 'Rockwell';
+    flex-flow: column wrap;
+}
+
+#logo {
+    max-width: 25vh;
+    float: right;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.sub {
+    float: right;
+    margin-top: 20px;
+    display: block;
+}
+
+.mobile-menu {
+    display: none;
+    float:right;
+        }
+
+/* animation 
+
+h1 {
+    animation: animated-text 1s steps(80,end) 1s 1 normal both;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 90px; 
+    text-shadow: 2px 2px #000;
+  }
+  
+  .subhead {
+    animation: animated-text 0s steps(1,end) 3s 1 normal both;
+    white-space: nowrap;
+    overflow: hidden;
+    font-size: 40px; 
+    text-shadow: 2px 2px #000;
+    margin-top: -100px;
+  }
+
+  /* text animation 
+  @keyframes animated-text{
+    from{width: 0%;}
+    to{width: 100%;}
+  }
+
+
+
+  
+  @media only screen and (min-width: 300px) and (max-width: 435px) {
+    h1 {
+        margin-top: -30px;
+        font-size: 31px; 
+    }
+
+    .subhead {
+        margin-top: 40px;
+        font-size: 30px; 
+        margin-bottom: -20px;
+    }
+
+    #garlic {
+        max-width: 20%;
+        min-width: 70%;
+        padding-right: 20px;
+        margin-top: 15px;
+        margin-left: 30px;
+    }
+}
+
+@media only screen and (max-width: 740px) {
+    .stroke {
+        display: none;
+    }
+
+    .mobile-menu {
+display: inline-block;
+margin-right: 40px;
+margin-bottom: 10px;
+    }
+
+    #ham-menu {
+        max-width: 40px;
+        float:right;
+    }
+}
+
+*/
